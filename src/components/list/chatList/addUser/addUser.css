@@ -1,0 +1,122 @@
+.addUser {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 25, 40, 0.77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addUser form {
+  display: flex;
+  gap: 20px;
+}
+
+.addUser input {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(17, 25, 40, 0.5);
+}
+
+.addUser button {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.addUser button.disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.addUser .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.addUser .header h3 {
+  color: white;
+  margin: 0;
+  font-size: 18px;
+}
+
+.addUser .close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.addUser .close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.addUser .success-message {
+  text-align: center;
+  color: white;
+  background-color: rgba(34, 197, 94, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.addUser .success-message p {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+}
+
+.addUser .back-btn {
+  background-color: #22c55e;
+  padding: 12px 24px;
+}
+
+.addUser .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(17, 25, 40, 0.3);
+  gap: 20px;
+}
+
+.addUser .user .detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.addUser .user .detail img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.addUser .user .detail span {
+  font-size: 20px;
+  font-weight: 500;
+}

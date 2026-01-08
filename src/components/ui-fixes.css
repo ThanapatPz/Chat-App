@@ -1,0 +1,80 @@
+/* 🎨 Additional Styles for Better UI */
+
+/* Loading animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: white;
+}
+
+/* Better image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for missing images */
+img[src=""], img:not([src]), img[src="/avatar.png"]:not([alt]) {
+  background-image: url('/avatar.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  #root {
+    padding: 0;
+  }
+}
+
+/* Better scrollbar for chat */
+.center::-webkit-scrollbar {
+  width: 6px;
+}
+
+.center::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.center::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.center::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Better button styles */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Input focus styles */
+input:focus {
+  outline: 2px solid rgba(81, 131, 254, 0.5);
+  outline-offset: 2px;
+}

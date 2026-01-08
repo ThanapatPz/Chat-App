@@ -1,0 +1,117 @@
+.chatList {
+    flex:1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Custom scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    
+    /* For Webkit browsers (Chrome, Safari, Edge) */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        transition: background 0.3s ease;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+        .searchBar{
+            flex:1;
+            background-color:rgba(17, 25, 40, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 10px;
+
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex: 1;
+            }
+
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .add{
+            width: 36px;
+            height: 36px;
+            background-color: rgba(17, 25, 40, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #dddddd35;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin: 0 8px;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            min-width: 0; /* ป้องกันการยืด */
+
+            span{
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                color: #a5a5a5;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 100%;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+}

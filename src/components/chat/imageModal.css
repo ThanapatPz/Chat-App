@@ -1,0 +1,116 @@
+/* Image Modal Styles */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal .close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.image-modal .close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Make chat images clickable */
+.message img {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.message img:hover {
+  opacity: 0.8;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+
+/* Mobile phones (max-width: 767px) */
+@media (max-width: 767px) {
+  .image-modal {
+    padding: 20px;
+  }
+  
+  .image-modal img {
+    max-width: 95%;
+    max-height: 85%;
+    border-radius: 6px;
+  }
+  
+  .image-modal .close-button {
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .image-modal .close-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .image-modal {
+    padding: 15px;
+  }
+  
+  .image-modal img {
+    max-width: 98%;
+    max-height: 80%;
+  }
+  
+  .image-modal .close-button {
+    top: 5px;
+    right: 10px;
+    font-size: 28px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  .image-modal img {
+    max-height: 75%;
+    max-width: 90%;
+  }
+  
+  .image-modal .close-button {
+    top: 5px;
+    right: 10px;
+  }
+}
